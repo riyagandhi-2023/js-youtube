@@ -55,22 +55,60 @@ const myFunction = function(){
 //how to find datatype of the variable use typeof
 
 
-console.log(typeof str1);           // string
-console.log(typeof score);          // number
-console.log(typeof scoreValue);     // number
-console.log(typeof isLoggedIn);     // boolean
-console.log(typeof outSideTemp);    // object
-console.log(typeof userEmail);      // undefined
-console.log(typeof id);             // symbol
-console.log(typeof anotherId);      // symbol
-console.log(typeof bigNumber);      // bigint
-console.log(typeof heros);          // object
-console.log(typeof myObj);          // object
-console.log(typeof myFunction);     // function
+// console.log(typeof str1);           // string
+// console.log(typeof score);          // number
+// console.log(typeof scoreValue);     // number
+// console.log(typeof isLoggedIn);     // boolean
+// console.log(typeof outSideTemp);    // object
+// console.log(typeof userEmail);      // undefined
+// console.log(typeof id);             // symbol
+// console.log(typeof anotherId);      // symbol
+// console.log(typeof bigNumber);      // bigint
+// console.log(typeof heros);          // object
+// console.log(typeof myObj);          // object
+// console.log(typeof myFunction);     // function
 
 
 
-// Refrence datatype (Non primitive) datatype are (Array, objects and fuctions) object datatype. Fuction only called function object datatype or only function
+// Refrence datatype (Non primitive) datatype are (Array, objects and fuctions) object datatype. 
+// Fuction only called function object datatype or only function
 
 // link:
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+// Stack (Primitive) [When you use memeory it means whatever varibale you have declraed you get copy of it.]
+// Heap (Non-Primitive) [When you define memory or object or anything in Heap it means you are getting original reference, 
+// it means whatever you change it will change on original value.]
+
+let myYoutubename = "riyagandhidotcom"
+
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+
+
+console.log(myYoutubename);
+console.log(anothername);
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "riya@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
