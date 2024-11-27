@@ -72,6 +72,33 @@ let gameCounter =100
 gameCounter++;    // ++gameCounter;
 console.log(gameCounter);
 
+
+//prefix and postfix operations:
+
+// *********************** postfix *********************** 
+
+let x = 3;                          //first y is assigning. The value so y is 3.  y = x
+const y = x++;                      //then x is incrementing. The value of x is 4.   x++ = 3+1 = 4
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"      
+
+//so in postfix (operator after operand (x++)) operator will increments and returns the value before incrementing 
+
+
+
+// *********************** prefix *********************** 
+
+
+
+let a = 3;                          //first a is incrementing. The value of is 4.  a++ = 1+3 = 4
+const b = ++a;                      //then b is initializing . The value of b is 4.   b = a
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+
+//so in prefix (operator after operand (++x)) operator will increments and returns the value after incrementing 
+
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
 
