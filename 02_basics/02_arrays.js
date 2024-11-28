@@ -28,7 +28,7 @@ const real_another_array = another_array.flat(Infinity)
 
 console.log(Array.isArray("Riya"));
 console.log(Array.from("Riya"));            //convert into array
-console.log(Array.from({name: "riya"}));   // will give you empty array
+console.log(Array.from({name: "riya"}));   // will give you empty array : need to give keys or values to get arrays
 
 
 let score1 = 100
