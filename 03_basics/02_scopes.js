@@ -10,15 +10,14 @@
 */
 
 //var c = 300               // gives bug and not recommanded to use
-let a = 300
-if (true) {                                 
-    let a = 10
-    const b = 20
-    // var c = 30           // gives bug and not recommanded to use
-    // c = 30               // gives bug and not recommanded to use
+let a = 300;
+if (true) {
+  let a = 10;
+  const b = 20;
+  // var c = 30           // gives bug and not recommanded to use
+  // c = 30               // gives bug and not recommanded to use
 
-    //console.log("INNER: ",a);
-    
+  //console.log("INNER: ",a);
 }
 
 //console.log(a);           // a is not define
@@ -28,70 +27,58 @@ if (true) {
 /* 
 When you look into google broweser (in console tab) its a core scope (not a global scope)
 in compare to you check your global scope using example code in code environment trough node
-*/ 
-
-
+*/
 
 // =================== nested scope =========================
 
 function one() {
-    const username = "riya"
+  const username = "riya";
 
-    function two() {
-        const website = "youtube"
-        //console.log(username);
-        
-    }
-    // console.log(website);                       // Error: cannot access because out of block scope of function two. 
+  function two() {
+    const website = "youtube";
+    //console.log(username);
+  }
+  // console.log(website);                       // Error: cannot access because out of block scope of function two.
 
-    two()
+  two();
 }
 
-one()
+one();
 
 /* 
 => line by line execute so if gets error it will stop executing 
 => needs to excute each and every function
 */
 
+if (true) {
+  const username = "riya";
+  if (username === "riya") {
+    const website = " youtube";
+    //console.log(username + website);
+  }
 
-if (true){
-    const username = "riya"
-    if (username === "riya"){
-        const website = " youtube"
-        //console.log(username + website);
-        
-    }
-
-    //console.log(website);                           // Error: cannot access because out of block scope.                
-
-} 
+  //console.log(website);                           // Error: cannot access because out of block scope.
+}
 
 //console.log(username);                                // Error: cannot access because out of block scope.
-
-
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 // ------------ (basic) function type 1 ----------------
 
 // console.log(addOne(5))                   //won't give you any error. output: 6
-function addOne(num){
-    return num + 1
+function addOne(num) {
+  return num + 1;
 }
 
 // addOne(5)
 
-
-
 // ------------- function type 2 -----------------------
 // =>  function but also called expression: define function in expression, often by assigning it to a variable
 
-
 // addTwo(5)                            // will give you an error (because not only declared but also holded in a variable)
-const addTwo = function(num){
-    return num + 2
-}
+const addTwo = function (num) {
+  return num + 2;
+};
 
 // addTwo(5)
-
