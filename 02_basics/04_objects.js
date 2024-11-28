@@ -56,11 +56,57 @@ const users = [
 users[1].email
 //console.log(users[1].email);
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));                   //output datatype: Array
-console.log(Object.values(tinderUser));                 //output datatype: Array
-console.log(Object.entries(tinderUser));                 //output datatype: Array in array
+// console.log(Object.keys(tinderUser));                   //output datatype: Array
+// console.log(Object.values(tinderUser));                 //output datatype: Array
+// console.log(Object.entries(tinderUser));                 //output datatype: Array in array
 
 
-console.log(tinderUser.hasOwnProperty('isLogged'));              //to search if the property is available or not. output: false
+// console.log(tinderUser.hasOwnProperty('isLogged'));              //to search if the property is available or not. output: false
+
+
+// object destructuring
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// console.log(course.courseInstructor);                // needs to do multuiple time if we want to exactract all value
+
+// const {courseInstructor} = course
+// console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course           // can change the name: called value destructuring
+console.log(instructor);
+
+
+// destructuring in react
+
+// const navbar = (props.company) => { }        (props.company) === ({company})
+// const navbar = ({company}) => { }       
+// navbar(company = "riya")
+
+// jason looks like object. Object has its name but jason doesn't has its name
+// below structure treat like jason its keys and values both are string
+
+// {
+//     "name": "hitesh"
+//     "coursename": "js in hindi"
+//     "price": "free"
+// }
+
+
+// Api is not necessary you will get in object format only
+// Api can also be in array format
+
+// array inside objects 
+[
+    {},
+    {},
+    {}
+]
+
+
