@@ -25,7 +25,7 @@ if (true) {
 // console.log(c);             // output: 30
 
 /* 
-When you look into google broweser (in console tab) its a core scope (not a global scope)
+When you look into google broweser (in console tab) its a window not a global scope
 in compare to you check your global scope using example code in code environment trough node
 */
 
