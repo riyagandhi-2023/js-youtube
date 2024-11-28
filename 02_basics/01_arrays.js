@@ -1,13 +1,15 @@
-// array
-// Array is collection of multiple items under a single variable name
-// JS arrays are resizable and can contain a mixof different data types: const myArr = [1, 1, 2, 3, 4, 5, true, "riya"]
-// inside bracket it is called elements
-// JS arrays are not associative arrays, cannot access: console.log(myArr["one"]);
-// must be accessed using nonnegative integers (or their respective string form) as indexes: console.log(myArr[0]);
-// zero based indexed
+// ===========  array =================
 
-// shallow copy is like heap
-// deep copy is like stack
+/* 
+=> Array is collection of multiple items under a single variable name
+=> JS arrays are resizable and can contain a mixof different data types: const myArr = [1, 1, 2, 3, 4, 5, true, "riya"]
+=> inside bracket it is called elements
+=> JS arrays are not associative arrays, cannot access: console.log(myArr["one"]);
+=> must be accessed using nonnegative integers (or their respective string form) as indexes: console.log(myArr[0]);
+=> zero based indexed
+
+=> shallow copy is like heap
+=> deep copy is like stack */
 
 const myArr = [0, 1, 2, 3, 4, 5];
 const myHeros = ["shaktiman", "naagraj"];
@@ -16,7 +18,7 @@ const myArr2 = new Array(1, 2, 3, 4);
 
 // console.log(myArr[1]);
 
-//Array methods
+//------------------ Array methods
 
 // myArr.push(6)               // .push() add value in the last in array
 // myArr.push(7)
@@ -37,7 +39,7 @@ const newArr = myArr.join();
 // console.log(newArr);         //typeof string
 // console.log(typeof newArr);
 
-// slice, splice
+//---------- slice, splice ------------//
 
 // slice: return a copy of a section of an array nd doesn't manipulate original array
 

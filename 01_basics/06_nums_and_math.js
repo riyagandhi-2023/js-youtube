@@ -8,7 +8,7 @@ const balance = new Number(100);
 // console.log(balance.toFixed(2));
 
 // const otherNumber = 23.8966          //23.9
-const otherNumber = 123.8966; //124 = if .toPrecision(3), 123.9 = if .toPrecision(4)
+const otherNumber = 123.8966;           //124 = if .toPrecision(3), 123.9 = if .toPrecision(4)
 // const otherNumber = 1123.8966        //1.12e+3
 
 //console.log(otherNumber.toPrecision(4));

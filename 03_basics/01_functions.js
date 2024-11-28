@@ -7,17 +7,17 @@ function sayMyName() {
 
 // sayMyName();         //basics way to excute
 
-// function addTwoNumbers(number1, number2){               // making functions defination is called parameters
-//     console.log(number1 + number2);
+/* function addTwoNumbers(number1, number2){               // making functions defination is called parameters
+    console.log(number1 + number2);
 
-// }
+}*/
 
 // const result = addTwoNumbers(3, 5)                     // value use or pass for calling function is called arguments
 // console.log("Result: ", result);
 
 // console is for printing value;; return use for returning value
 
-//1) way to return
+//=========== 1) way to return
 
 function addTwoNumbers(number1, number2) {
   let result = number1 + number2;
@@ -29,7 +29,7 @@ function addTwoNumbers(number1, number2) {
 // const result = addTwoNumbers(3, 5)
 // console.log("Result: ", result);
 
-//2) way to return
+//=========== 2) way to return
 
 function addTwoNumbers(number1, number2) {
   return number1 + number2;
@@ -38,33 +38,35 @@ function addTwoNumbers(number1, number2) {
 const result = addTwoNumbers(3, 9);
 //console.log("Result: ", result);
 
-// function loginUserMessage(username){                 // or define username = "abc" (give default value)
-//     if(username === undefined){                      // if(!username)
-//         console.log("Please enter a username");
-//         return
-//     }
-//     return `${username} just logged in`
-// }
-// // console.log(loginUserMessage("riya"))
-// console.log(loginUserMessage())                 // undefined just logged in
+/*
+function loginUserMessage(username){                 // or define username = "abc" (give default value)
+    if(username === undefined){                      // if(!username)
+        console.log("Please enter a username");
+        return
+    }
+    return `${username} just logged in`
+}
+// console.log(loginUserMessage("riya"))
+console.log(loginUserMessage())  */ // undefined just logged in
 
-// another way of writing if:
-// function loginUserMessage(username){
-//     if(!username){
-//         console.log("Please enter a username");
-//         return
-//     }
-//     return `${username} just logged in`
-// }
-// console.log(loginUserMessage())
+// ===========> another way of writing if:
+/*
+function loginUserMessage(username){
+    if(!username){
+        console.log("Please enter a username");
+        return
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMessage()) */
 
-// another way of not getting undefined answer: give default value
+// ===========> another way of not getting undefined answer: give default value
 
 function loginUserMessage(username = "sam") {
-  // if(!username){
-  //     console.log("Please enter a username");
-  //     return
-  // }
+  /* if(!username){
+      console.log("Please enter a username");
+      return
+  }*/
   return `${username} just logged in`;
 }
 //console.log(loginUserMessage())                 //output: sam just logged in
@@ -96,7 +98,7 @@ const user = {
 };
 
 function handleObject(anyobject) {
-  //function
+  //============== function
   //console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
   //return anyobject                            //line (1)
 }
@@ -104,13 +106,13 @@ function handleObject(anyobject) {
 
 //console.log(handleObject(user));               //line (2) (combination of line (1) and line (2) will give output: { username: 'riya', price: 199 }
 
-// can pass direct object
+// ========== can pass direct object
 // handleObject({
 //     username: "sam",
 //     price: 399
 // })
 
-// pass and use Array into function
+// =========== pass and use Array into function
 
 const myNewArray = [200, 400, 100, 600];
 
@@ -119,4 +121,4 @@ function returnSecondValue(getArray) {
 }
 
 //console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));                     // can direct pass array
+console.log(returnSecondValue([200, 400, 500, 1000])); // can direct pass array
