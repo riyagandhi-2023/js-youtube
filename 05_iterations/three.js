@@ -3,14 +3,14 @@
 // ["", "", ""]
 // [{}, {}, {}]
 
-const arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5];
 for (const num of arr) {
-   // console.log(num);
+  // console.log(num);
 }
 
-const greetings = "Hello world!"
+const greetings = "Hello world!";
 for (const greets of greetings) {
-    //console.log(`Each char is ${greets}`);
+  //console.log(`Each char is ${greets}`);
 }
 
 // Maps:
@@ -20,30 +20,27 @@ for (const greets of greetings) {
 
 */
 
-const map = new Map()
-map.set('IN', "India")
-map.set('USA', "United States of America")
-map.set('Fr', "France")
-map.set('IN', "India")
+const map = new Map();
+map.set("IN", "India");
+map.set("USA", "United States of America");
+map.set("Fr", "France");
+map.set("IN", "India");
 
 //console.log(map);
 
 for (const [key, value] of map) {
-    //console.log(key, ':-', value);
-    
+  //console.log(key, ':-', value);
 }
-
 
 //--------------------------------------
 
-
 const myObject = {
-    game1: 'NFS',
-    game2: 'Spiderman'
-}
+  game1: "NFS",
+  game2: "Spiderman",
+};
 
 for (const [key, value] of myObject) {
-    console.log(key, ':-', value);
+  console.log(key, ":-", value);
 }
 
 //output error: myObject is not iterable
@@ -51,15 +48,14 @@ for (const [key, value] of myObject) {
 //======== OR ==============//
 
 const myObject1 = {
-    "game1": 'NFS',
-    "game2": 'Spiderman'
-}
+  game1: "NFS",
+  game2: "Spiderman",
+};
 
 for (const [key, value] of myObject1) {
-    console.log(key, ':-', value);
+  console.log(key, ":-", value);
 }
 
 //output error: myObject1 is not iterable
 
-
-// ==> object can be iterable but different way
+// ==> object can be iterable with for-in
