@@ -1,24 +1,23 @@
 // you cannot use this in arrow function
 // this is refer to current context
 
-// lines 5 to 16 username is a property of the user object, so this.username works. 
+// lines 5 to 16 username is a property of the user object, so this.username works.
 
 const user = {
-    username: "riya",
-    price: 999,
-    
-    welcomeMessage: function(){
-        //console.log(`${this.username}, welcome to website`);
-        //console.log(this);
-    }
+  username: "riya",
+  price: 999,
 
-}
+  welcomeMessage: function () {
+    //console.log(`${this.username}, welcome to website`);
+    //console.log(this);
+  },
+};
 
 // user.welcomeMessage()
 // user.username = "sam"
 // user.welcomeMessage()
 
-//console.log(this);                 //output: empty object {}    
+//console.log(this);                 //output: empty object {}
 
 /*  
 => because we are in node environment and your this will referring to empty object because right now there is no context in global
@@ -33,44 +32,35 @@ const user = {
    When called as a standalone function, it defaults to the global context (or undefined in strict mode).
 */
 
-
-
 // function chai(){
 //     // console.log(this);                   // this context (this) only work in object
 
 //     let username = "riya"
 //     console.log(this.username);             //output: undefined;  this context (this.username) cannot work in a function;
-    
+
 // }
 
 // chai()
 
-
 // username is a local variable inside the function, not a property of this
-
 
 // const chai = function (){
 //     let username = "riya"
 //     //console.log(this.username);                 output: undefined
-    
+
 // }
 
 // chai()
 
-
-
 // ===================== this in Arrow function =================
 
-
 const chai = () => {
-    let username = "riya"
-    //console.log(this.username);                 // output: undefined
-    //console.log(this);                          // output: {} empty
-}
+  let username = "riya";
+  //console.log(this.username);                 // output: undefined
+  //console.log(this);                          // output: {} empty
+};
 
-chai()
-
-
+chai();
 
 // ===================== Arrow function =================
 
@@ -78,7 +68,6 @@ chai()
 
 // ** if you wrapping in {} curly braces [=() => {}] need to write "retrun" **//
 // follow below example
-
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
@@ -98,10 +87,8 @@ chai()
 // const addTwo = (num1, num2) =>  (num1 + num2)
 // console.log(addTwo(3,4));
 
-
-const addTwo = (num1, num2) =>  ({username: "riya"})        // to return object need to wrap in paratheses ({ })
+const addTwo = (num1, num2) => ({ username: "riya" }); // to return object need to wrap in paratheses ({ })
 //console.log(addTwo(3,4));
-
 
 //---------------------------------------------//
 
