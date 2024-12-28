@@ -10,7 +10,7 @@
 ## Solution from him (Hitesh)
 
 ```javascript
-    console.log("hitesh")
+console.log("hitesh")
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
