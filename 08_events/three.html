@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | Events</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+    //setInterval(sayDate,1000, "hi")
+
+    // const intervalId = setInterval(sayDate, 1000, "hi")
+    // clearInterval(intervalId)
+
+
+//----------- click stop/start button should stop/start printing------------
+
+   let intervalId = null
+    const start = function(str){
+        console.log(str, Date.now());
+    }
+    document.querySelector('#start').addEventListener('click',function(){
+        intervalId = setInterval(start,1000,"hi")
+        console.log("start")
+    })
+
+    
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalId)
+        intervalId = null
+        console.log("stop");
+        
+    })
+
+
+    /* 
+    let intervalId = null; // Variable to store interval ID
+
+    const start = function(str) {
+        console.log(str, Date.now());
+    };
+
+    document.querySelector('#start').addEventListener('click', function() {
+        if (!intervalId) { // Prevent multiple intervals from starting
+            intervalId = setInterval(start, 1000, "hi");
+            console.log("Started interval");
+        }
+    });
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        if (intervalId) {
+            clearInterval(intervalId); // Stop the interval
+            intervalId = null; // Reset the interval ID
+            console.log("Stopped interval");
+        }
+    });
+*/
+    
+</script>
+</html>
