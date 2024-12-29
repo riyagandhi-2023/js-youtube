@@ -6,7 +6,7 @@
 
 ## Object
 - collection of properties and methods
-- toLowerCase
+- toLowerCase (example)
 
 ## why use OOP
 
