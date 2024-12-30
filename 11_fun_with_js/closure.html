@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+
+    //============ Lexical scoping ===========//
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // ===== child (inner) function can access parent(outer) function
+    // ===== sbilling function can't access each other 
+    // ===== parent function can't access child function
+
+    // function outer(){
+    //     let username = 'riya'
+    //     console.log("Outer",secret);
+    //     function inner(){
+    //         let secret = 'my123'
+    //         console.log("inner",username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo",username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+    // } 
+    // outer()
+    // console.log("Too outer",username);
+
+</script>
+
+<script>
+    
+    // ================= Closure ===================//
+
+    // it return store not only inner function but also store outer function
+    // function return enire Lexical scope
+    
+    //  function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    /* good but what if there are too many */
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    // best approch
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+</html>
